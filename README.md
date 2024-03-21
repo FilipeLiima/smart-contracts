@@ -1,27 +1,66 @@
-## ERC-20
+## Foundry
 
-O projeto RENT é uma iniciativa que visa fornecer um meio de autenticação robusto e confiável para transações financeiras dentro da plataforma Crypto Home. Para alcançar esse objetivo, o RENT é implementado como um token ERC-20, construído sobre a infraestrutura da blockchain Ethereum.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-## ERC-721
+Foundry consists of:
 
-O projeto Crypto Home NFTs é uma iniciativa que busca representar cada imóvel mintado como um token não fungível (NFT) na blockchain Ethereum. Esses NFTs servem como uma forma única e autêntica de identificar e transacionar propriedades dentro da plataforma Crypto Home. Além disso, para facilitar a interação financeira entre os usuários e os imóveis, os NFTs são projetados para se integrarem perfeitamente com o token ERC-20 denominado RENT.
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-### Tecnologias Utilizadas:
+## Documentation
 
-- **Framework:** Froundry
-- **SmartContracts:** Solidity
+https://book.getfoundry.sh/
 
-### ROADMAP:
+## Usage
 
-- **criação do token ERC20** - Implementado
-- **criação do token ERC721 com garantia de propriedade NFT para owner do contrato** - Implementado
-- **permissão para mintar NFts a partir dos metadados do arquivo .json** - Implementado
-- **permissão para transferência de nfts mintados para usuário que vai locar imóvel** - Trabalhando nisso
-- **garantir que a transferência de nfts mintados para o usuário só será possível mediante pagamento de aluguel com ERC-20** - Trabalhando nisso
-- **permissão para queima de tokens ao final do contrato de aluguel** - Trabalhando nisso
-- **testes e deploy na rede** - Em breve
-  -- **implementação com template e front end** - Em breve
+### Build
 
-MODELAGEM ARQUITETURA:
+```shell
+$ forge build
+```
 
-![alt text](image-6.png)
+### Test
+
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
