@@ -25,3 +25,7 @@ O projeto Crypto Home NFTs é uma iniciativa que busca representar cada imóvel 
 ### MODELAGEM ARQUITETURA:
 
 ![alt text](image-7.png)
+
+### FOUNDRY RUN:
+
+![alt text](image-8.png)
