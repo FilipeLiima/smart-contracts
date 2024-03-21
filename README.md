@@ -11,4 +11,17 @@ O projeto Crypto Home NFTs é uma iniciativa que busca representar cada imóvel 
 - **Framework:** Froundry
 - **SmartContracts:** Solidity
 
-![alt text](image-5.png)
+### ROADMAP:
+
+- **criação do token ERC20** - Implementado
+- **criação do token ERC721 com garantia de propriedade NFT para owner do contrato** - Implementado
+- **permissão para mintar NFts a partir dos metadados do arquivo .json** - Implementado
+- **permissão para transferência de nfts mintados para usuário que vai locar imóvel** - Trabalhando nisso
+- **garantir que a transferência de nfts mintados para o usuário só será possível mediante pagamento de aluguel com ERC-20** - Trabalhando nisso
+- **permissão para queima de tokens ao final do contrato de aluguel** - Trabalhando nisso
+- **testes e deploy na rede** - Em breve
+  -- **implementação com template e front end** - Em breve
+
+MODELAGEM ARQUITETURA:
+
+![alt text](image-6.png)
