@@ -23,7 +23,7 @@ contract NFT_RENT is ERC721 {
         owner = msg.sender;
     }
 
-    // Função para atribuir os metadados a um token
+    // Função para atribuir os metadados a um token - AQUI EU CONSIGO MINTAR VÁRIOS TOKENS ERC721 E ATRIBUIR AO ID DE UM IMÓVEL NO ARQUIVO .JSON
     function setPropertyMetadata(uint256 tokenId, string memory name, string memory description, string memory imageURI) public {
         require(msg.sender == ownerOf(tokenId), "NFT_RENT: Caller is not the owner of the token");
         PropertyMetadata storage metadata = propertyMetadata[tokenId];
