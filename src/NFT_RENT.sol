@@ -22,6 +22,9 @@ contract NFT_RENT is ERC721 {
     // Evento emitido quando um imóvel é alugado
     event Rent(address owner, address renter, uint256 tokenId);
 
+    // Evento emitido quando um imóvel é queimado
+    event Burn(address owner, uint256 tokenId);
+
     // Construtor do contrato
     constructor(address _tokenAddress, uint256 _rentAmount) ERC721("NFT_RENT", "NFTRENT") {
         owner = msg.sender;
@@ -50,5 +53,12 @@ contract NFT_RENT is ERC721 {
         require(token.transferFrom(msg.sender, owner, rentAmount), "NFT_RENT: Failed to transfer tokens");
         _mint(msg.sender, tokenId);
         emit Rent(owner, msg.sender, tokenId);
+    }
+
+    // Função para queimar um token ERC-721
+    function burnToken(uint256 tokenId) public {
+        require(msg.sender == ownerOf(tokenId), "NFT_RENT: Caller is not the owner of the token");
+        _burn(tokenId);
+        emit Burn(msg.sender, tokenId);
     }
 }
