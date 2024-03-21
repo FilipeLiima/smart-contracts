@@ -30,15 +30,6 @@ contract RENT is ERC20 {
         return true;
     }
 
-    // Função para comprar um token ERC721 com tokens ERC20
-    function buyERC721(address erc721Contract, uint256 tokenId, uint256 amount) public returns (bool) {
-        // Transfere a quantidade especificada de tokens ERC20 para este contrato
-        IERC20(tokenAddress).transferFrom(msg.sender, address(this), amount);
-        // Assume que o contrato ERC721 possui uma função buy para lidar com a compra
-        require(ERC721(erc721Contract).buy(msg.sender, tokenId), "RENT: Failed to buy ERC721");
-        return true;
-    }
-
     // Função para verificar o saldo de tokens de um determinado endereço
     function getBalance(address account) public view returns (uint256) {
         return balanceOf(account); // Retorna o saldo de tokens do endereço especificado

@@ -47,11 +47,11 @@ contract NFT_RENT is ERC721 {
         return (metadata.name, metadata.description, metadata.imageURI);
     }
 
-    // Função para comprar um token ERC-721 com tokens ERC-20
-    function buyToken(uint256 tokenId) public {
+    // Função para alugar um token ERC721 com tokens ERC20
+    function rentToken(uint256 tokenId) public {
         IERC20 token = IERC20(tokenAddress);
         require(token.transferFrom(msg.sender, owner, rentAmount), "NFT_RENT: Failed to transfer tokens");
-        _mint(msg.sender, tokenId);
+        _transfer(owner, msg.sender, tokenId);
         emit Rent(owner, msg.sender, tokenId);
     }
 
