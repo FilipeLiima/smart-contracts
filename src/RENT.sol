@@ -9,8 +9,7 @@ contract RENT is ERC20 {
     // Construtor do contrato ERC20
     constructor() ERC20("RENT", "RNT") {
         owner = msg.sender; // Define o endereço do criador do contrato como proprietário
-        balances[msg.sender] = 50000 * 10 ** 18; // Define o saldo inicial do proprietário
-        _totalSupply = 50000 * 10 ** 18; // Define o totalSupply
+        _mint(msg.sender, 50000 * 10 ** 18); // Emite 50.000 tokens RNT com 18 casas decimais e atribui ao proprietário
     }
     
     // Modificador para permitir que apenas o proprietário execute certas funções
