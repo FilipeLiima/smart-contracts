@@ -4,12 +4,12 @@ pragma solidity ^0.8.19;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract RENT is ERC20 {
-    address private owner; // Endereço do proprietário do contrato
+    address private owner; 
 
-    // Construtor do contrato ERC20
+
     constructor() ERC20("RENT", "RNT") {
-        owner = msg.sender; // Define o endereço do criador do contrato como proprietário
-        _mint(msg.sender, 50000 * 10 ** 18); // Emite 50.000 tokens RNT com 18 casas decimais e atribui ao proprietário
+        owner = msg.sender; 
+        _mint(msg.sender, 50000 * 10 ** 18); 
     }
     
     // Modificador para permitir que apenas o proprietário execute certas funções
@@ -17,7 +17,7 @@ contract RENT is ERC20 {
         require(msg.sender == owner, "RENT: Only owner");
         _;
     }
-
+    
     // Função para aprovar que um endereço gaste tokens em nome do usuário
     function approve(address spender, uint256 amount) public override returns (bool) {
         super.approve(spender, amount); // Chama a função approve da biblioteca ERC20
