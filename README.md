@@ -26,7 +26,7 @@ O projeto Crypto Home NFTs é uma iniciativa que busca representar cada imóvel 
 
 ![alt text](image-7.png)
 
-### DEPLOY
+### DEPLOY:
 
 - **RENT ADDRESS:** 0xDC4A99B156E007BB35C124127856f32740FbF4f7
 - **NFT_RENT ADDRESS:-** 0x857CB9e748049D6D33db390330978E676405d5b5
