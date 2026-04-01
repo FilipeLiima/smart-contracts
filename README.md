@@ -1,32 +1,76 @@
-### ERC-20
+<h1 align="center">CryptoHome Contracts</h1>
 
-O projeto RENT é uma iniciativa que visa fornecer um meio de autenticação robusto e confiável para transações financeiras dentro da plataforma Crypto Home. Para alcançar esse objetivo, o RENT é implementado como um token ERC-20, construído sobre a infraestrutura da blockchain Ethereum.
+<h3 align="center">Infraestrutura blockchain para locação descentralizada de imóveis</h3>
 
-### ERC-721
+<p align="center">
+  <code>ERC-20</code> &nbsp;•&nbsp; <code>ERC-721</code> &nbsp;•&nbsp; <code>Solidity</code> &nbsp;•&nbsp; <code>Foundry</code>
+</p>
 
-O projeto Crypto Home NFTs é uma iniciativa que busca representar cada imóvel mintado como um token não fungível (NFT) na blockchain Ethereum. Esses NFTs servem como uma forma única e autêntica de identificar e transacionar propriedades dentro da plataforma Crypto Home. Além disso, para facilitar a interação financeira entre os usuários e os imóveis, os NFTs são projetados para se integrarem perfeitamente com o token ERC-20 denominado RENT.
+---
 
-### Tecnologias Utilizadas:
+## 📌 Visão Geral
 
-- **Framework:** Froundry
-- **SmartContracts:** Solidity
+Este repositório contém os contratos inteligentes que sustentam a plataforma **CryptoHome** —
+uma solução descentralizada para locação de imóveis na blockchain Ethereum.
 
-### ROADMAP:
+A arquitetura é composta por dois contratos principais que trabalham em conjunto:
 
-- **criação do token ERC20** - Implementado
-- **criação do token ERC721 com garantia de propriedade NFT para owner do contrato** - Implementado
-- **permissão para mintar NFts a partir dos metadados do arquivo .json** - Implementado
-- **permissão para transferência de nfts mintados para usuário que vai locar imóvel** - Trabalhando nisso
-- **garantir que a transferência de nfts mintados para o usuário só será possível mediante pagamento de aluguel com ERC-20** - Trabalhando nisso
-- **permissão para queima de tokens ao final do contrato de aluguel** - Trabalhando nisso
-- **testes e deploy na rede** - Em breve -
-- **implementação com template e front end** - Em breve
+---
 
-### MODELAGEM ARQUITETURA:
+## 🪙 RENT — Token ERC-20
 
-![alt text](image-7.png)
+Token de utilidade da plataforma CryptoHome, usado como meio de pagamento nas transações
+de aluguel entre locadores e locatários.
 
-### DEPLOY:
+- Autenticação robusta de transações financeiras on-chain
+- Integrado nativamente ao contrato NFT para validar pagamentos
+- Construído sobre a infraestrutura da Ethereum
 
-- **RENT ADDRESS:** 0xDC4A99B156E007BB35C124127856f32740FbF4f7
-- **NFT_RENT ADDRESS:-** 0x857CB9e748049D6D33db390330978E676405d5b5
+**Deploy:** `0xDC4A99B156E007BB35C124127856f32740FbF4f7`
+
+---
+
+## 🏠 CryptoHome NFTs — Token ERC-721
+
+Cada imóvel cadastrado na plataforma é representado como um NFT único na blockchain,
+garantindo autenticidade, rastreabilidade e propriedade verificável.
+
+- Mint de NFTs a partir de metadados `.json`
+- Transferência de NFT ao locatário condicionada ao pagamento em RENT (ERC-20)
+- Queima do token ao encerramento do contrato de aluguel
+- Integração nativa com o token RENT
+
+**Deploy:** `0x857CB9e748049D6D33db390330978E676405d5b5`
+
+---
+
+## 🛠️ Tecnologias
+
+| Camada | Tecnologia |
+|--------|-----------|
+| Framework | Foundry |
+| Smart Contracts | Solidity |
+| Padrões | ERC-20 · ERC-721 |
+| Rede | Ethereum |
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Criação do token ERC-20 (RENT)
+- [x] Criação do token ERC-721 com garantia de propriedade para owner do contrato
+- [x] Mint de NFTs a partir de metadados `.json`
+- [ ] Transferência de NFTs para o locatário *(em andamento)*
+- [ ] Pagamento de aluguel em RENT como pré-requisito para transferência *(em andamento)*
+- [ ] Queima de tokens ao final do contrato de aluguel *(em andamento)*
+- [ ] Testes e deploy na rede principal *(em breve)*
+- [ ] Integração com frontend *(em breve)*
+
+---
+
+## 🏗️ Arquitetura
+
+![Modelagem de Arquitetura](image-7.png)
+
+---
+
